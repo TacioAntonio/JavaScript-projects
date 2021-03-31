@@ -18,7 +18,7 @@
 [15. Reddit chat](https://github.com/TacioAntonio/JavaScript-projects/tree/main/15.%20Reddit-Chat)
 [16. Notification-SocketIO](https://github.com/TacioAntonio/JavaScript-projects/tree/main/16.%20Notification-SocketIO)
 [17. Google authentication](https://github.com/TacioAntonio/JavaScript-projects/tree/main/17.%20Google%20authentication)
-[1. JavaScript Drum Kit](https://github.com/TacioAntonio/JavaScript-projects/tree/main/1.%20JavaScript%20Drum%20Kit#1-javascript-drum-kit)
+[18. Speech and Voice recognition](https://github.com/TacioAntonio/JavaScript-projects/tree/main/18.%20Speech%20and%20Voice%20recognition#18-speech-and-voice-recognition)
 [1. JavaScript Drum Kit](https://github.com/TacioAntonio/JavaScript-projects/tree/main/1.%20JavaScript%20Drum%20Kit#1-javascript-drum-kit)
 [1. JavaScript Drum Kit](https://github.com/TacioAntonio/JavaScript-projects/tree/main/1.%20JavaScript%20Drum%20Kit#1-javascript-drum-kit)
 [1. JavaScript Drum Kit](https://github.com/TacioAntonio/JavaScript-projects/tree/main/1.%20JavaScript%20Drum%20Kit#1-javascript-drum-kit)

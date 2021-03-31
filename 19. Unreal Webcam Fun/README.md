@@ -1,4 +1,3 @@
-# 17. Take photos
+# 19. Unreal Webcam Fun
 > Take photos with MediaDevices.getUserMedia()
 
-![Speech](./img/speech.png)
