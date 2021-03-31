@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input class="message" type="text"/>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const $ = element => document.querySelector(element);
+        const messageElement = $('.message');
+
+        const message = function() { console.log('Conectado.'); }
+        socket.on('connect', message);
+
+        function notifyMe(message){
+            console.log(message)
+            if (!("Notification" in window)) {
+                alert("Este browser não suporta notificações de Desktop");
+            }
+        
+            Notification.requestPermission(function (permission) {
+                // If the user accepts, let's create a notification
+                if (permission === "granted") {
+                    var notification = new Notification(message);
+                }
+            })
+        }
+
+        socket.on('getNotification', notifyMe);
+
+        messageElement.addEventListener('keydown', function (e) {
+            if(e.keyCode === 13) {
+                socket.emit('notification', messageElement.value)
+            }
+        });
+
+    </script>
+</body>
+</html>

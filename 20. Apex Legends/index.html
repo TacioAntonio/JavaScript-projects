@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Apex Legends</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Apex legends characters">
+    <link rel="stylesheet" href="./assets/stylesheet/index.css">
+    <link rel="stylesheet" href="./assets/stylesheet/reset.css">
+    <link rel="shortcut icon" href="icon.png">
+</head>
+<body class="container">
+    <noscript>
+        For full functionality of this site it is necessary to enable JavaScript.
+        Here are the <a href="https://www.enable-javascript.com/">
+        instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
+    <button class="button center -continue">Continue</button>
+    <div class="gear center hidden" role="progressbar" aria-live="polite"></div>
+    <form class="login-container hidden" action="./views/characters.html" method="post" role="search" aria-live="polite" novalidate>
+        <div class="logo" aria-hidden="true"></div>
+        <div class="login-inputs" role="list">
+            <div class="tooltip">
+                <input class="input -user" type="text" name="user" aria-label="required user" aria-labelledby="user-login" placeholder="User *" minlength="5" maxlength="8" required aria-required="true" autofocus autocomplete="off">
+                <span id="user-login" class="tooltiptext" role="tooltip" aria-hidden="true" aria-live="polite">Fill in at least 5 characters.</span>
+            </div>
+            <div class="tooltip">
+                <span class="password-eye-container">
+                    <input class="input -password" type="password" name="password" aria-label="required password" aria-labelledby="password-login" placeholder="Password *" minlength="8" maxlength="12" required aria-required="true">
+                    <img class="eye -closed" src="./assets/images/eye-closed.svg" alt="Button show/hidden password" >
+                </span>
+                <span id="password-login" class="tooltiptext" role="tooltip" aria-hidden="true" aria-live="polite">Fill in at least 8 characters.</span>
+            </div>
+        </div>
+        <div class="login-buttons" role="list">
+            <button class="button -login" type="submit" disabled aria-live="assertive">Log in</button><!-- Se o tamanho do input 1 for 5 e do input 2 for 8 então habilita -->
+            <button class="button -register" type="button">Register</button>
+        </div>
+    </form>
+    <form class="register-container hidden" action="/" method="post" role="search" aria-live="polite" novalidate>
+        <div class="logo" aria-hidden="true"></div>
+        <div class="register-inputs" role="list">
+            <div class="tooltip">
+                <input class="input -email" type="email" name="email" aria-label="required email" aria-labelledby="email-register" placeholder="Email *" minlength="1" maxlength="50" required aria-required="true" autocomplete="off" spellcheck="false">
+                <span id="email-register" class="tooltiptext" role="tooltip" aria-hidden="true" aria-live="polite">Fill in user@provider.com.</span>
+            </div>
+            <div class="tooltip">
+                <input class="input -user" type="text" name="user" aria-label="required user" aria-labelledby="user-register" placeholder="User *" minlength="5" maxlength="8" required aria-required="true" autocomplete="off">
+                <span id="user-register" class="tooltiptext" role="tooltip" aria-hidden="true" aria-live="polite">Fill in at least 5 characters.</span>
+            </div>
+            <div class="tooltip">
+                <span class="password-eye-container">
+                    <input class="input -password" type="password" name="password" aria-label="required password" aria-labelledby="password-register" placeholder="Password *" minlength="8" maxlength="12" required aria-required="true">
+                    <img class="eye -closed" src="./assets/images/eye-closed.svg" alt="Button show/hidden password" >
+                </span>
+                <span id="password-register" class="tooltiptext tooltip-password" role="tooltip" aria-hidden="true" aria-live="polite">
+                    Fill in at least 8 characters.<br>
+                    Have lowercase letters.<br>
+                    Have capital letters.<br>
+                    Have numbers.<br>
+                    Have special character.<br>
+                </span>
+            </div>
+        </div>
+        <div class="register-buttons" role="list">
+            <button class="button -confirm" type="submit" disabled aria-live="assertive">Confirm</button><!-- Se o tamanho do input 1 for 5 e do input 2 for 8 então habilita -->
+            <button class="button -back" type="button">Back</button>
+        </div>
+    </form>
+    <script src="./assets/javascript/index.js"></script>
+</body>
+</html>

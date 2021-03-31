@@ -1,0 +1,31 @@
+:root {
+    --positionX: 50%;
+    --positionY: 50%;
+    --objectColor: #ff0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    position: absolute;
+    top: var(--positionX);
+    left: var(--positionY);
+    transform: translate(var(--positionX), var(--positionY));
+    color: var(--objectColor);
+    z-index: 0;
+}
+
+aside {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.884);
+    width: 100%;
+    max-width: 220px;
+    padding: 12px;
+    color: white;
+    border-bottom-right-radius: 12px;
+}

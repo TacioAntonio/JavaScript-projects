@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="chat">
+        <nav class="navbar">
+            <p class="user"></p>
+            <p class="members"></p>
+        </nav>
+        <div class="dialogs"></div>
+        <span class="message-container">
+            <input type="text" class="message-bar" maxlength="120" />
+            <div class="emojis-container">
+                <img class="emojis" src="./img/emoji.svg" alt="emoji">
+            </div>
+            <img class="send" src="./img/send.svg" alt="send">
+        </span>
+    </main>
+    <aside class="usersOnline">
+    </aside>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const $ = element => document.querySelector(element);
+        const messageBar = $('.message-bar');
+        const sendMessage = $('.send');
+        const user = $('.user');
+        const usersOnline = $('.usersOnline')
+
+        const emojisContainer = $('.emojis-container');
+        const emojiMessage = $('.emojis');
+        const membersOnline = $('.members');
+
+        function handleMessageBar(e) {
+            if (e.type === 'click' || e.keyCode === 13) {
+                socket.emit('message', messageBar.value)
+                messageBar.value = ''
+            }
+
+        }
+
+        messageBar.addEventListener('keydown', handleMessageBar);
+        sendMessage.addEventListener('click', handleMessageBar);
+
+        socket.on('dialog', dialog => {
+            $('.dialogs').innerHTML += `
+                <div class="dialog">
+                    <p class="user">${dialog.user}</p>
+                    <p class="message">${dialog.message}</p>
+                </div>
+            `;
+        });
+
+        socket.on('myDialog', dialog => {
+            $('.dialogs').innerHTML += `
+                <div class="myDialog">
+                    <p class="myUser">${dialog.user}</p>
+                    <p class="myMessage">${dialog.message}</p>
+                </div>
+            `;
+        })
+
+        socket.on('connect', _ => {
+            socket.on('usersId', userId => {
+                usersOnline.innerHTML += `<p class="userOnline">${userId}</p>`;
+                user.innerHTML = `<p class="userId">${userId}</p>`;
+            });
+
+            socket.on('users', userId => {
+                usersOnline.innerHTML += `<p class="userOnline">${userId}</p>`;
+            });
+        })
+
+
+
+        socket.on('members', members => {
+            membersOnline.innerHTML = `${members} Members`;
+        })
+
+        emojiMessage.addEventListener('click', function () {
+            emojisContainer.style.transform = 'translateY(-73px)';
+            emojisContainer.style.visibility = 'visible';
+            this.style.transform = 'translateY(73px)';
+        })
+
+        emojisContainer.addEventListener('mouseleave', function () {
+            this.style.visibility = 'hidden';
+            emojiMessage.style.transform = 'translateY(73px)';
+        })
+
+        const allEmojis = ['☺️', '☹️', '✌️', '✍️', '☝️',
+            '☂️', '☀️', '☁️', '❄️', '☃️', '☕️', '✈️', '☎️',
+            '⚡️', '☔️', '☹️', '✌️', '✍️', '☝️', '☂️', '☀️', '☁️',
+            '❄️', '☃️', '☕️', '✈️', '☎️'];
+
+        allEmojis.forEach(emoji => {
+            const span = document.createElement('span');
+            span.classList.add('emoji');
+            span.textContent = emoji;
+
+            emojisContainer.appendChild(span);
+        })
+
+
+        const emojis = document.querySelectorAll('.emoji');
+
+        emojis.forEach(emoji => {
+            emoji.addEventListener('click', function () {
+                messageBar.value += this.textContent;
+            })
+        })
+        //
+    </script>
+</body>
+
+</html>

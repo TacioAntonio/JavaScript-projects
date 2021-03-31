@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat in real time</title>
+    <link rel="stylesheet" href="/stylesheet/index.css">
+    <link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="container">
+
+    <span class="nickname-container ">
+        <input class="first-nickname" type="text" autocomplete="off" maxlength="12" placeholder="Nickname">
+        <button class="enter-button">
+            <img class="enter" src="/images/arrow.svg" alt="Enter chat">
+        </button>
+    </span>
+
+    <div class="chat-container">
+        <form class="chat-box hidden">
+            <div class="chat-header">
+                <input id="n" class="nickname" autocomplete="off" maxlength="12" placeholder="Nickname"/>
+                <img class="close" src="/images/close.svg" alt="Close chat">
+            </div>
+            <ul class="each-message"></ul>
+            <div class="chat-message">
+                <input class="box-message" autocomplete="off" maxlength="50" placeholder="Message..."/>
+                <button class="send-button">
+                    <img class="send" src="/images/send.svg" alt="Send message">
+                </button>
+            </div>
+        </form>
+
+        <div class="chat-open hidden">
+            <img class="dialog" src="/images/chat.png" alt="Open chat">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/socket.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

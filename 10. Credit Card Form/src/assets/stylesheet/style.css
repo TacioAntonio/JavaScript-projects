@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: cadetblue;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.box-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.box-card__creditCard {
+    max-width: 300px;
+    height: 164px;
+    margin-top: -82px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.box-card__flipper {
+    background: url('../images/card.jpeg');
+    box-shadow: 0 0 6pt 2pt rgba(0,0,0,.7);
+    border-radius: 12px;
+	width: 100%;
+	height: 100%;
+    transition: transform 0.8s;
+	transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.--front, .--back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.--back{
+    background: url('../images/card.jpeg');
+    border-radius: 12px;
+    transform: rotateY(180deg);
+}
+
+.blackBanner {
+    background-color:#0b081f;
+    width: 100%;
+    height: 36px;
+    margin-top: 26px;
+}
+
+.box-card__cvv   {
+    color: white;
+    text-align: right;
+    font-size: .8em;
+    margin-right: 22px;
+}
+
+.CVV {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:white;
+    width: 100%;
+    max-width: 260px;
+    height: 32px;
+    border-radius: 6px;
+    padding-right: 12px;
+    text-align: right;
+}
+
+.box-card__chip {
+    margin: 12px 0 0 12px;
+    width: 46px;
+}
+
+.--amex {
+    background: url('../images/amex.png');
+}
+
+.--visa {
+    background: url('../images/visa.png');
+}
+
+.--troy {
+    background: url('../images/troy.png');
+}
+
+.box-card__flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px 12px 0 0;
+    width: 64px;
+    height: 32px;
+    background-size: 100% 100%;
+}
+
+.box-card__flagReverse {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 12px 12px 0;
+    width: 64px;
+    height: 32px;
+    background-size: 100% 100%;
+}
+
+.--discover {
+    background: url('../images/discover.png');
+    height: 26px;
+    background-size: 100% 100%;
+}
+.--mastercard {
+    background: url('../images/mastercard.png');
+    height: 46px;
+    background-size: 100% 100%;
+}
+
+.cardNumber {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.box-card__cardHolder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 12px 12px;
+}
+.box-card__expires > p,
+.box-card__cardHolder > p {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    opacity: .5;
+}
+
+.box-card__expires > label,
+.box-card__cardHolder > label {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+
+.box-card__expires {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 12px 12px 0;
+}
+
+select {
+    width: 96px;
+    margin-right: 12px;
+}
+
+input, select {
+    border: 1px solid #ced6e0;
+    border-radius: 4px;
+    height: 32px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+input[type=text] {
+    padding-left: 12px;
+}
+
+input[type=text]:last-child {
+    width: 64px;
+}
+
+label {
+    font-size: .8888em;
+}
+
+.--select {
+    outline: 1px solid lightblue;
+}
+
+.--selectEmpty {
+    box-shadow: 0 0 6pt 2pt red;
+}
+
+.box-card__data {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.box-card__submit {
+    width: 100%;
+    height: 32px;
+    background: #2364d2;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
+    color: #fff;
+    cursor: pointer;
+}

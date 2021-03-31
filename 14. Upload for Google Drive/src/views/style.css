@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.c-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border: none;
+    padding: 12px;
+    box-shadow: 2px 2px 8px rgb(128, 128, 128);
+}
+
+.c-modal__title {
+    margin-bottom: 12px;
+}
+
+.c-modal__sendFile,
+.c-modal__file {
+    cursor: pointer;
+}
+
+.c-modal__sendFile {
+    margin-top: 12px;
+    background-color: transparent;
+    border: none;
+}
+
+.c-modal__googleDrive {
+    width: 64px;
+    height: 64px;
+}

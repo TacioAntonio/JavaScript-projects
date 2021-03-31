@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color:#550f83;
+}
+
+.message {
+    background-color: #9c65c4;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 26px;
+    padding-left: 2px;
+    box-shadow: inset 2px 2px 8px 0 #57018a;
+}

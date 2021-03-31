@@ -1,0 +1,49 @@
+:root {
+    --body-bg-color: indigo;
+    --clock-color: rgb(102, 2, 173);
+}
+
+html, body {
+    background-color: var(--body-bg-color);
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--clock-color);
+    border-radius: 50%;
+    background-color: var(--clock-color);
+    box-shadow: inset 3px 3px 2px var(--clock-color);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(67, 2, 114);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 0; 
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right: 10px solid rgb(67, 2, 114); 
+    position: relative;
+    bottom: 8px;
+    transform: translateX(-25%);
+}

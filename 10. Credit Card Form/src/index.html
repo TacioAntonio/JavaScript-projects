@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/stylesheet/style.css">
+</head>
+<body>
+    <form action="#" class="box-card"> 
+        <div class="box-card__creditCard">
+            <div class="box-card__flipper">
+
+                <div class="box-card__flipper --front">
+                    <img class="box-card__chip" src="./assets/images/chip.png" alt="Credit card chip">
+                    <span class="box-card__flag --visa"></span>
+                    <label for="cardNumber" class="cardNumber">#### #### #### ####</label>
+                    <div class="box-card__cardHolder">
+                        <p>Card Holder</p>
+                        <label for="cardName" class="cardName">full name</label>
+                    </div>
+                    <div class="box-card__expires">
+                        <p>Expires</p>
+                        <label for="expiritionDate" class="expiritionDate">MM/YY</label>
+                    </div>
+                </div>
+                
+                <div class="box-card__flipper --back">
+                    <div class="blackBanner"></div>
+                    <div>
+                        <p class="box-card__cvv">CVV</p>
+                        <input type="password" class="CVV"></input>
+                    </div>
+                    <span class="box-card__flagReverse --visa"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <label for="cardNumber" class="box-card__cardNumber">Card Number</label>
+        <input type="text" name="cardNumber" id="cardNumber" maxlength="16"/>
+        <label for="cardName" class="box-card__cardName">Card Holder</label>
+        <input type="text" name="cardName" id="cardName" maxlength="20"/>
+        
+        <section class="box-card__data">
+            <div>
+                <label for="expiritionDate">Expirition Date</label><br/>
+                <select name="months" id="expiritionDate" class="box-card__month">
+                    <option value="0">Month</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div>
+                <br/>
+                <select name="years" class="box-card__year">
+                    <option value="0">Year</option>
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
+                    <option value="22">2022</option>
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    <option value="25">2025</option>
+                    <option value="26">2026</option>
+                    <option value="27">2027</option>
+                    <option value="28">2028</option>
+                    <option value="29">2029</option>
+                    <option value="30">2030</option>
+                </select>
+            </div>
+            <div>
+                <label for="CVV">CVV</label><br/>
+                <input name="CVV" id="CVV" type="text"/>
+            </div>
+        </section>
+        <button class="box-card__submit">Submit</button>
+    </form>
+    
+    <script src="./assets/javascript/selectors.js"></script>
+    <script src="./assets/javascript/validations.js"></script>
+    <script src="./assets/javascript/flag.js"></script>
+    <script src="./assets/javascript/cardNumber.js"></script>
+    <script src="./assets/javascript/cardName.js"></script>
+    <script src="./assets/javascript/creditCardExpiritionDate.js"></script>
+    <script src="./assets/javascript/CVV.js"></script>
+</body>
+</html>

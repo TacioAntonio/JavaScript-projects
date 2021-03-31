@@ -1,0 +1,209 @@
+.container {
+    background: url(../images/background-desktop.png) center center / cover no-repeat fixed content-box content-box rgb(20, 20, 20);
+}
+
+.center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+[class*="-container"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 450px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #000000;
+    padding: 12px;
+    animation: move 5s infinite;
+    transition: all 0.3s;
+}
+
+@keyframes move {
+    0% {
+        top: 40%;
+    }
+    25% {
+        top: 40.5%;
+    }
+    50% {
+        top: 41%;
+    }
+    75% {
+        top: 40.5%;
+    }
+    100% {
+        top: 40%;
+    }
+}
+
+.logo {
+    background-image: url(../../icon.png);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+[class*="-inputs"] {
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+}
+
+.input:not([class="password-eye-container"]) {
+    width: 400px;
+    height: 32px;
+    color: #757575;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #000000;
+    padding: 12px;
+}
+
+[class*="-inputs"] > .tooltip:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.6);
+}
+
+.button[class$="-login"], .button[class$="-confirm"] {
+    background-color: #10e90899;
+}
+
+.button[class$="-login"]:hover,
+.button[class$="-login"]:focus, 
+.button[class$="-confirm"]:hover, 
+.button[class$="-confirm"]:focus {
+    font-weight: bold;
+    box-shadow: 0 10px 10px -2px rgba(16, 233, 8, 0.6);
+}
+
+.button[class$="-register"], .button[class$="-back"] {
+    background-color: #950b0b;
+}
+
+.button[class$="-register"]:hover,
+.button[class$="-register"]:focus, 
+.button[class$="-back"]:hover, 
+.button[class$="-back"]:focus {
+    font-weight: bold;
+    box-shadow: 0 10px 10px -2px rgba(149, 11, 11, 0.6);
+}
+
+.button[class$="-continue"]:hover,
+.button[class$="-continue"]:focus {
+    color: #cc9551;
+    font-weight: bold;
+    box-shadow: 0 10px 10px -2px rgb(204, 149, 81);
+}
+
+.gear {
+    background: url(../images/Gear.svg); 
+    width: 50px;
+    height: 50px;
+}
+
+.password-eye-container {
+    position: relative; 
+    padding: 0;
+}
+
+.eye {
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #141414; 
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 50%;
+    max-width: 100%;
+    font-size: .9em;
+    background-color: #141414;
+    color: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    word-wrap: break-word;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    top: 0;
+    left: 101%;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #141414  transparent transparent;
+}
+
+.tooltip-password {
+    margin-top: -32px;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        background: url(../images/background-mobile.jpg) center center / cover no-repeat fixed content-box content-box rgb(20, 20, 20);;
+    }
+
+    [class*="-buttons"] {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 37%;
+        transform: translateX(-50%);
+    }
+
+    [class*="-buttons"] > .button {
+        margin-bottom: 12px;
+    }
+
+    .input { 
+        max-width: 180px;
+        height: auto;
+    }
+
+    .tooltip .tooltiptext::after {
+        margin-top: -20px;
+    }
+
+    .tooltip-password {
+        margin-top: -92px;
+    }
+}

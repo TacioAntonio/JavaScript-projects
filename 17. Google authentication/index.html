@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="google-signin-client_id"
+        content="875223593141-va1f11cc674ticahrfn1o03p98b0ofqm.apps.googleusercontent.com">
+    <script src=" https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="./public/stylesheet/reset.css">
+    <link rel="stylesheet" href="./public/stylesheet/style.css">
+</head>
+
+<body>
+    <div class="dropdown">
+        <div class="dropdown-content">
+            <button class="signOut" onclick="signOut();">Sair</button>
+        </div>
+    </div>
+
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <script src="./public//javascript/authentication.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #8e24aa;
+    font-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.chat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid#9c27b0;
+    background-color: #9c27b0;
+    padding: 32px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 12px 0 purple;
+}
+
+.messages {
+    border: 1px solid#ab47bc;
+    background-color: #ab47bc;
+    height: 320px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: inset 2px 2px 12px 0 purple;
+    position: relative;
+    padding: 12px;
+    word-break: break-all;
+}
+
+.right {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+.left {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+.speech,
+.talk {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

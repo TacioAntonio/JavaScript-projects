@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 100%;
+}
+
+.piano {
+    display: flex;
+    padding: 0 2px 6px 2px;
+    background: linear-gradient(-65deg,#000,#222,#000,#666,#222 75%);
+    color: #333;
+    height: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.button__key {
+    border: 3px solid black;
+    height: 100%;
+    flex-basis: 100%;
+    background: linear-gradient(-30deg,#f8f8f8,#fff);
+    box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #fff, inset 1px 0 0 #fff, inset -1px 0 0 #fff, 0 4px 3px rgba(0,0,0,.7), inset 0 -1px 0 #fff, inset 1px 0 0 #fff, inset -1px -1px 15px rgba(0,0,0,.5), -3px 4px 6px rgba(0,0,0,.5);
+    position: relative;
+    transition: all .07s;
+}
+
+.button__key:not(:last-child) {
+    margin-right: -6px;
+}
+
+.button__playing {
+    height: 98%;
+}
+
+.letter__key {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    font-weight: bold;
+    opacity: .5;
+    transition: all .07s;
+}
+
+.letter__playing {
+    opacity: 1;
+}
+

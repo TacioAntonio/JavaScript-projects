@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload file to cloud storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="c-modal">
+        <h1 class="c-modal__title">Upload file to cloud storage</h1>
+        <form action='upload' method='post' encType="multipart/form-data">
+            <input class="c-modal__file" type="file" name="file" /><br />
+            <button class="c-modal__sendFile">
+                <img class="c-modal__googleDrive" src="./img/googleDrive.png" title="Send google drive"
+                    alt="Send google drive">
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
