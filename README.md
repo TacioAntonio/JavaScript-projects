@@ -1,8 +1,9 @@
 # <img src="./images/javascript.jpg" width="32" hight="32"> JavaScript projects
 > This repository aims to group small projects created from HTML, CSS and JavaScript
 
-[1. JavaScript Drum Kit](https://github.com/TacioAntonio/JavaScript-projects/tree/main/1.%20JavaScript%20Drum%20Kit#1-javascript-drum-kit)
-[2. CSS + JS Clock](https://github.com/TacioAntonio/JavaScript-projects/tree/main/2.%20CSS%20%2B%20JS%20Clock#2-css--js-clock)
+
+<span style="color: #0399e8">•</span> [1. JavaScript Drum Kit](https://github.com/TacioAntonio/JavaScript-projects/tree/main/1.%20JavaScript%20Drum%20Kit#1-javascript-drum-kit)
+<span style="color: #0399e8">•</span> [2. CSS + JS Clock](https://github.com/TacioAntonio/JavaScript-projects/tree/main/2.%20CSS%20%2B%20JS%20Clock#2-css--js-clock)
 [3. Playing with CSS Variables and JS](https://github.com/TacioAntonio/JavaScript-projects/tree/main/3.%20Playing%20with%20CSS%20Variables%20and%20JS#3-playing-with-css-variables-and-js)
 [4. Rick and Morty cards](https://github.com/TacioAntonio/JavaScript-projects/tree/main/4.%20Rick%20and%20Morty%20cards#4-rick-and-morty-cards)
 [5. Flex Panels Image Gallery](https://github.com/TacioAntonio/JavaScript-projects/tree/main/5.%20Flex%20Panels%20Image%20Gallery)
