@@ -1,0 +1,81 @@
+.game__container {
+    background-color: rgb(190, 188, 188);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.playable {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+.tile {
+    background-color: black;
+    flex: 1;
+}
+
+.points {
+    padding: absolute;
+}
+
+.player {
+    width: 64px;
+    height: 64px;
+    pointer-events: none;
+    position: relative;
+    bottom: 0;
+    transition-property: bottom;
+    transition-duration: 1.2s;
+    transition-timing-function: linear;
+}
+
+.points__wrapper {
+    /* background-color: antiquewhite; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    padding: 6px 0 0 6px;
+}
+
+.points {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.obstacle__wrapper {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+}
+
+.obstacle {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    animation-name: moveLeft;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveLeft {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.hidden {
+    display: none;
+}

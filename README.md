@@ -23,3 +23,4 @@
 - [19. Unreal Webcam Fun](https://github.com/TacioAntonio/JavaScript-projects/tree/main/19.%20Unreal%20Webcam%20Fun#19-unreal-webcam-fun)
 - [20. Apex Legends](https://github.com/TacioAntonio/JavaScript-projects/tree/main/20.%20Apex%20Legends#20-apex-legends)
 - [21. Chat in real time](https://github.com/TacioAntonio/JavaScript-projects/tree/main/21.%20Chat%20real-time%20with%20Socket.io#21-chat-in-real-time)
+- [22. Dinossaur game gamepad](https://github.com/TacioAntonio/JavaScript-projects/tree/main/22.%20Dinossaur%20game%20gamepad#22-dinossaur-game-gamepad)

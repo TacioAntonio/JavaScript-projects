@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(190, 188, 188);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    opacity: .5;
+    transition: opacity .5s linear;
+    cursor: pointer; 
+}
+
+.wrapper:hover,
+.wrapper:focus {
+    opacity: 1;
+}
+
+.play {
+    width: 96px;
+    height: 96px;   
+}
+
+.text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+}
